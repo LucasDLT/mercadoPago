@@ -17,7 +17,6 @@ export const createPayment = async (
         payer:{
             email,
         },
-        items,
         metadata:{
         },
     };
