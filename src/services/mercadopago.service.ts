@@ -6,13 +6,15 @@ export const createPayment = async (
     PaymentMethodId:string,
      token:string,
       email:string, 
-      items:MercadoPagoItem[]
+      items:MercadoPagoItem[],
+      description:string,
+      installments:number
     )=>{
     const body = {
         transaction_amount: items.reduce((acc, item)=> acc + item.unit_price * item.quantity, 0),
         token,
-        description: items[0].title,
-        installments: 1,
+        description,
+        installments,
         payment_method_id: PaymentMethodId,
         payer:{
             email,
