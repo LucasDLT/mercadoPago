@@ -3,6 +3,8 @@ import {MercadoPagoConfig} from "mercadopago"
 
 const mercadopago = new MercadoPagoConfig({
     accessToken: TEST_MERCADOPAGO_ACCESS_TOKEN || "",
+    
 });
+console.log("ACCESS TOKEN CARGADO:", TEST_MERCADOPAGO_ACCESS_TOKEN);
 
 export default mercadopago
